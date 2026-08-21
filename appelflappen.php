@@ -1,2 +1,2 @@
-Hallo dit is een websitepagina        test
+Hallo dit is een websitepagina   test
 
