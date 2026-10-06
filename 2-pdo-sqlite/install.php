@@ -8,7 +8,7 @@ $db->exec(
         naam TEXT NOT NULL,
         bericht TEXT NOT NULL,
         cijfer INTEGER,
-        aangemaakt TEXT NOT NULL
+        aangemaakt TEXT NOT NULL DEFAULT (datetime())
     )"
 );
 

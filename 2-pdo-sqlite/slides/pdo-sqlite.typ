@@ -56,11 +56,8 @@ Dan moet je ze *ergens* bewaren.
 
 == SQLite in één zin
 
-Een database = *één bestand* op schijf.
+Een database = *één bestand* op de hardeschijf.
 Bijvoorbeeld `app.db`.
-
-- Geen aparte server nodig voor deze les
-- Past bij kleine oefeningen en lokale ontwikkelomgeving
 
 = Formulier → kolommen
 
@@ -93,9 +90,17 @@ Plus vaak: `id` en een tijdstip.
 
 == Oefening (5 min)
 
-Op papier: kies *jouw* mini-formulier (3 velden).
+Op papier: kies *jouw* formulier.
 Schrijf kolomnaam + type erbij.
 Later bouw je dít uit — of je gebruikt feedback.
+
+== Database-ontwerp
+Dat is wat je net gemaakt hebt.
+
+Schrijf in je technisch ontwerp welke tabellen en welke kolommen elke tabel heeft.
+Een document dat alle technische informatie van je project bevat.
+
+Later ga je dit doen met een ERD diagram.
 
 = PDO + SQLite
 
@@ -114,12 +119,10 @@ $db->setAttribute(
 - Bestand bestaat nog niet? SQLite maakt het aan bij schrijven
 - Exceptions aan = fouten zie je meteen
 
-== Bestand `db.php` (steiger)
+== Bestand `db.php` (scafold)
 
 Eén plek voor de verbinding.
 Andere pagina’s doen: `require "db.php";`
-
-Zie map `starters/`.
 
 = CREATE TABLE
 
@@ -131,7 +134,7 @@ CREATE TABLE IF NOT EXISTS feedback (
   naam TEXT NOT NULL,
   bericht TEXT NOT NULL,
   cijfer INTEGER,
-  aangemaakt TEXT NOT NULL
+  aangemaakt TEXT NOT NULL DEFAULT datetime('now')
 );
 ```
 
